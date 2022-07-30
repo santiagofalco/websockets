@@ -1,0 +1,25 @@
+//- script(type='text/javascript').
+//-         include '../public/js/newProduct.js'
+
+
+html 
+    head
+        title='newProduct'
+        style(type="text/css").
+            form {
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+            }
+    body
+        h2='Ingrese Producto'
+        form(id='productForm')
+            label(name="producto") Producto: 
+            input(id="name", name="name") 
+            label(name="precio") Precio:        
+            input(id="price", name="price") 
+            label(name="thumbnail")  Url Imagen: 
+            input(id="thumbnail", name="thumbnail") 
+            button(type="submit") Enviar
+            a(href='/productos') !{'Ir a tabla productos'}
+    script(src='../public/js/newProduct.js')
