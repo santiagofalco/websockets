@@ -7,7 +7,7 @@ const chatBox = document.getElementById('chatBox')
 const mailInput = document.getElementById('mailInput');
 
 mailInput.addEventListener('keyup', (e) => {
-    if (e.key === 'Enter') {
+    if (e.key === 'Enter' && e.target.value.trim() !== "") {
         useremail = e.target.value
         mailInput.setAttribute('disabled', true)
         chatBox.removeAttribute('disabled')
